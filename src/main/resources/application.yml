@@ -1,0 +1,27 @@
+# Defaults    
+server:
+   port: ${port:6060}
+
+logging:
+   file: log.txt
+
+name: mock-service
+
+# For spring boot admin client
+spring:
+   application:
+      name: ${name}
+   boot.admin.client:
+      url: http://localhost:${monitoring.port}
+      enabled: true
+      service-url: http://localhost:${port}
+ 
+management:
+   endpoints:
+      web:
+         exposure:
+            include: "*"
+                
+
+
+    
