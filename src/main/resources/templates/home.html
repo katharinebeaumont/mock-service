@@ -1,0 +1,18 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<title>Microservice Application</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+    <h1>Info </h1>
+    <tbody>
+    <p>Mock microservice application.</p>
+    
+    <p th:text="'I am running on port ' + ${port}"</p>
+    
+    	<form style="display:inline-block" th:action="@{'/logs/'}" method="GET">
+    	<button type="submit">Show Logs</button>
+    </form>
+</body>
+</html>
